@@ -29,6 +29,7 @@ barchartGC(~infected + treatment,data=guysData)
 barchartGC(~infected + treatment,data=guysData, type="percent")
 
 ```
+
 Per the graph, the drug is not effective for the guys. It appears it is not helping the guys keeping from contracting covid. More people who took the drug got sick than those who took the placebo.
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
@@ -42,6 +43,7 @@ barchartGC(~infected + treatment,data=galsData)
 barchartGC(~infected + treatment,data=galsData, type="percent")
 
 ```
+
 It appears that the drug seems to be more effective for the gals. Fewer people got sick when taking the drug rather than taking the placebo. Approximately 64% of the people who took the drug got sick, where as approximately 36% of the people took the drug got sick.
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
@@ -56,11 +58,19 @@ barchartGC(~infected + treatment,data=DrugData, type="percent")
 
 ```
 
+The Drug is working about the same for the drug users as it did for the gals. Approximately 64% of those who took the placebo got sick, and approximately 36% of those who took the drug got sick.
 
 #  LGBTQ
 ```{r}
 LGBTQData <- filter(FinalData,LGBTQ=="gay")
 ```
+```{r}
+barchartGC(~infected + treatment,data=LGBTQData)
+barchartGC(~infected + treatment,data=LGBTQData, type="percent")
+
+```
+
+In this graph, it appears that the drug is not effective for the LGBTQ community. More than twice the number of people who took the drug than the placebo got sick with Covid.
 
 # Discussion and Conclusion
 
