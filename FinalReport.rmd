@@ -32,6 +32,16 @@ barchartGC(~infected + treatment,data=guysData, type="percent")
 
 Per the graph, the drug is not effective for the guys. It appears it is not helping the guys keeping from contracting covid. More people who took the drug got sick than those who took the placebo.
 
+###  Numerical Summaries for guys 
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=guysData)
+rowPerc(table1)
+colPerc(table1)
+``` 
+
+It appears that 58% of the people that got infected took the drug, and 42% got the placebo.
+
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
 
 # Gals
@@ -71,6 +81,15 @@ barchartGC(~infected + treatment,data=LGBTQData, type="percent")
 ```
 
 In this graph, it appears that the drug is not effective for the LGBTQ community. More than twice the number of people who took the drug than the placebo got sick with Covid.
+
+
+###Numerical Summaries  
+
+```{r}
+table1 <- xtabs(~class + Sex, data=davisdata)
+rowPerc(table1)
+colPerc(table1)
+```
 
 # Discussion and Conclusion
 
