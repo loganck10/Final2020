@@ -56,6 +56,16 @@ barchartGC(~infected + treatment,data=galsData, type="percent")
 
 It appears that the drug seems to be more effective for the gals. Fewer people got sick when taking the drug rather than taking the placebo. Approximately 64% of the people who took the drug got sick, where as approximately 36% of the people took the drug got sick.
 
+###  Numerical Summaries for gals 
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=galsData)
+rowPerc(table1)
+colPerc(table1)
+``` 
+
+The percentage of the gals that got infected on the drug was 33% and on the placebo was 67%.
+
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
 
 # Drug Users
@@ -70,6 +80,16 @@ barchartGC(~infected + treatment,data=DrugData, type="percent")
 
 The Drug is working about the same for the drug users as it did for the gals. Approximately 64% of those who took the placebo got sick, and approximately 36% of those who took the drug got sick.
 
+###  Numerical Summaries for DrugUsers 
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=DrugData)
+rowPerc(table1)
+colPerc(table1)
+``` 
+
+The percentage of drug users that got infected while taking the drug was 33% while taking the placebo was 67%.
+
 #  LGBTQ
 ```{r}
 LGBTQData <- filter(FinalData,LGBTQ=="gay")
@@ -82,14 +102,16 @@ barchartGC(~infected + treatment,data=LGBTQData, type="percent")
 
 In this graph, it appears that the drug is not effective for the LGBTQ community. More than twice the number of people who took the drug than the placebo got sick with Covid.
 
-
-###Numerical Summaries  
+###  Numerical Summaries for LGBTQ 
 
 ```{r}
-table1 <- xtabs(~class + Sex, data=davisdata)
+table1 <- xtabs(~infected + treatment, data=LGBTQData)
 rowPerc(table1)
 colPerc(table1)
-```
+``` 
+
+In the LGBTQ community, the percentage of who got infected on the drug was 71%, where as on the placebo it was 29%.
+
 
 # Discussion and Conclusion
 
