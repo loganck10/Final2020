@@ -42,6 +42,16 @@ colPerc(table1)
 
 It appears that 58% of the people that got infected took the drug, and 42% got the placebo.
 
+## Inferential for guys
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+The odds of a guy getting Covid if he takes the drug are 1.5:1 greater than if he takes the placebo.
+
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
 
 # Gals
@@ -65,6 +75,16 @@ colPerc(table1)
 ``` 
 
 The percentage of the gals that got infected on the drug was 33% and on the placebo was 67%.
+
+## Inferential for gals
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+The odds of a gal getting Covid if she takes the drug are .5:1.
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
 
@@ -90,6 +110,16 @@ colPerc(table1)
 
 The percentage of drug users that got infected while taking the drug was 33% while taking the placebo was 67%.
 
+## Inferential for DrugUsers
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+The odds of a druguser getting Covid if they take the drug are .55:1.
+
 #  LGBTQ
 ```{r}
 LGBTQData <- filter(FinalData,LGBTQ=="gay")
@@ -111,6 +141,17 @@ colPerc(table1)
 ``` 
 
 In the LGBTQ community, the percentage of who got infected on the drug was 71%, where as on the placebo it was 29%.
+
+## Inferential for LGBTQ
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+The odds of the LGBTQ getting Covid if they take the drug are 2.5:1.
+
 
 
 # Discussion and Conclusion
